@@ -3,7 +3,6 @@ package nsq
 import (
 	"bufio"
 	"bytes"
-	"compress/flate"
 	"crypto/tls"
 	"encoding/json"
 	"errors"
@@ -15,7 +14,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/golang/snappy"
+	"github.com/klauspost/compress/flate"
+	"github.com/klauspost/compress/snappy"
 )
 
 // IdentifyResponse represents the metadata
